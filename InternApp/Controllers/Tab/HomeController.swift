@@ -6,28 +6,18 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeController: UIViewController {
     // MARK: - TODO
     /**
      Workbooka çevir
      cardtan gelen kelimeleri cell içinde anlamlarıyla birlikte göster
-     workbook kelimelerini gptye yolla text versin 
+     workbook kelimelerini gptye yolla text versin
      */
-
     
     // MARK: - UI Components
-   
-    private let label: UILabel = {
-        let label = UILabel()
-        label.textColor = .label
-        label.textAlignment = .center
-        label.font = .systemFont(ofSize: 18, weight: .semibold)
-        label.text = "Your Total Point is :"
-        label.numberOfLines = 2
-        return label
-    }()
-
+    let hostingController = UIHostingController(rootView: HomeView())
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -36,25 +26,43 @@ class HomeController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
+        if parent == nil {
+            navigationController?.setNavigationBarHidden(false, animated: true)
+        }
+    }
+    
     // MARK: - UI Setup
     private func setupUI() {
-        self.view.backgroundColor = .systemBackground
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogout))
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.didMove(toParent: self)
         
-        self.view.addSubview(label)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            label.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            label.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            hostingController.view.topAnchor.constraint(equalTo: view.topAnchor),
+            hostingController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            hostingController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-
+    
+    
     
     
     // MARK: - Selectors
-
+    
     @objc private func didTapLogout() {
         let vc = LoginController()
         let nav = UINavigationController(rootViewController: vc)
