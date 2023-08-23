@@ -10,7 +10,9 @@ import Foundation
 class DataManager {
     static let shared = DataManager()
     
-    var addedWordPairs: [(english: String, meaning: String)] = []
+    var addedWordPairs: [WordPair]?
     
-    private init() {}
+    init(addedWordPairs: [WordPair]? = nil) {
+        self.addedWordPairs = addedWordPairs
+    }
 }

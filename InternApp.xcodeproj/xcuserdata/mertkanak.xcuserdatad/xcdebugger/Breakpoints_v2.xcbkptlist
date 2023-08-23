@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5F73E6DC-4273-42BA-9384-13F8C21F4BFE"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InternApp/Controllers/Core/TableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "CardTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC - 46d222d71d34b0c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.TableViewController.addedWordPairs.getter : Swift.Array&lt;(english: Swift.String, meaning: Swift.String)&gt;"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Core/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC - 5e1fd32b7b5df8f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.TableViewController.addedWordPairs.setter : Swift.Array&lt;(english: Swift.String, meaning: Swift.String)&gt;"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Core/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC - 24a9d13190eb12c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.TableViewController.addedWordPairs.modify : Swift.Array&lt;(english: Swift.String, meaning: Swift.String)&gt;"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Core/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC - 4a0f9946d8e17297"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.TableViewController.addedWordPairs.modify : Swift.Array&lt;(english: Swift.String, meaning: Swift.String)&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Core/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "15">
+               </Location>
+               <Location
+                  uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC - b9c1bae99ef58a18"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.TableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; InternApp.TableViewController"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Core/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "121">
+               </Location>
+               <Location
+                  uuid = "0938ADE8-3BE9-42D0-9D9A-F5AE09BD8DEC - 3c16edccfa5344dc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.TableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;InternApp.TableViewController&gt;"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Core/TableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "78">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB8176CA-0B5C-4895-A2EF-D8B029E51C91"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "InternApp/Controllers/Tab/CardController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "didTapNextButton()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB8176CA-0B5C-4895-A2EF-D8B029E51C91 - c3fea26a6f929a69"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.CardController.didTapAddToWorkbookButton() -&gt; ()"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Tab/CardController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  uuid = "CB8176CA-0B5C-4895-A2EF-D8B029E51C91 - c3fea26a6f929ad6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "InternApp.CardController.didTapAddToWorkbookButton() -&gt; ()"
+                  moduleName = "InternApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mertkanak/Desktop/InternApp/InternApp/Controllers/Tab/CardController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "57">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
