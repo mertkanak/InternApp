@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomTextField: UITextField {
-
+    
     enum CustomTextFieldType {
         case username
         case email
@@ -23,13 +23,12 @@ class CustomTextField: UITextField {
         
         self.backgroundColor = .secondarySystemBackground
         self.layer.cornerRadius = 10
-        
         self.returnKeyType = .done
         self.autocorrectionType = .no
         self.autocapitalizationType = .none
         
-//        self.leftViewMode = .always
-//        self.leftViewMode = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.size.height))
+        //        self.leftViewMode = .always
+        //        self.leftViewMode = UIView(frame: CGRect(x: 0, y: 0, width: 12, height: self.frame.size.height))
         
         switch fieldType {
         case .username:

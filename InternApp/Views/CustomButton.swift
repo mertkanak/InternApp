@@ -8,7 +8,7 @@
 import UIKit
 
 class CustomButton: UIButton {
-
+    
     enum FontSize {
         case big
         case med

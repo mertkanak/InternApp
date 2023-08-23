@@ -2,9 +2,9 @@ import Foundation
 import GPTEncoder
 
 #if os(Linux)
-    import AsyncHTTPClient
-    import FoundationNetworking
-    import NIOFoundationCompat
+import AsyncHTTPClient
+import FoundationNetworking
+import NIOFoundationCompat
 #endif
 
 public class ChatGPTAPI: @unchecked Sendable {
@@ -19,7 +19,7 @@ public class ChatGPTAPI: @unchecked Sendable {
     private let apiKey: String 
     private let gptEncoder = GPTEncoder()
     public private(set) var historyList = [Message]()
-
+    
     let dateFormatter: DateFormatter = {
         let df = DateFormatter()
         df.dateFormat = "YYYY-MM-dd"
@@ -58,9 +58,9 @@ public class ChatGPTAPI: @unchecked Sendable {
     
     private func jsonBody(text: String, model: String, systemText: String, temperature: Double, stream: Bool = true) throws -> Data {
         let request = Request(model: model,
-                        temperature: temperature,
-                        messages: generateMessages(from: text, systemText: systemText),
-                        stream: stream)
+                              temperature: temperature,
+                              messages: generateMessages(from: text, systemText: systemText),
+                              stream: stream)
         return try JSONEncoder().encode(request)
     }
     
@@ -69,7 +69,7 @@ public class ChatGPTAPI: @unchecked Sendable {
         self.historyList.append(Message(role: "assistant", content: responseText))
     }
     
-    #if os(Linux)
+#if os(Linux)
     private let httpClient = HTTPClient(eventLoopGroupProvider: .createNew)
     private var clientRequest: HTTPClientRequest {
         var request = HTTPClientRequest(url: urlString)
@@ -79,14 +79,14 @@ public class ChatGPTAPI: @unchecked Sendable {
         }
         return request
     }
-
+    
     public func sendMessageStream(text: String) async throws -> AsyncThrowingStream<String, Error> {
-         var request = self.clientRequest
+        var request = self.clientRequest
         request.body = .bytes(try jsonBody(text: text, stream: true))
         
         let response = try await httpClient.execute(request, timeout: .seconds(25))
         try Task.checkCancellation()
-
+        
         guard response.status == .ok else {
             var data = Data()
             for try await buffer in response.body {
@@ -118,7 +118,7 @@ public class ChatGPTAPI: @unchecked Sendable {
             return nil
         }
     }
-
+    
     public func sendMessage(text: String,
                             model: String = ChatGPTAPI.Constants.defaultModel,
                             systemText: String = ChatGPTAPI.Constants.defaultSystemText,
@@ -133,7 +133,7 @@ public class ChatGPTAPI: @unchecked Sendable {
             try Task.checkCancellation()
             data.append(.init(buffer: buffer))
         }
-
+        
         guard response.status == .ok else {
             var error = "Bad Response: \(response.status.code)"
             if data.count > 0, let errorResponse = try? jsonDecoder.decode(ErrorRootResponse.self, from: data).error {
@@ -152,14 +152,14 @@ public class ChatGPTAPI: @unchecked Sendable {
         }
         
     }
-
+    
     deinit {
         let client = self.httpClient
         Task.detached { try await client.shutdown() }
         
     }
-    #else
-
+#else
+    
     private let urlSession = URLSession.shared
     private var urlRequest: URLRequest {
         let url = URL(string: urlString)!
@@ -168,7 +168,7 @@ public class ChatGPTAPI: @unchecked Sendable {
         headers.forEach {  urlRequest.setValue($1, forHTTPHeaderField: $0) }
         return urlRequest
     }
-
+    
     public func sendMessageStream(text: String,
                                   model: String = ChatGPTAPI.Constants.defaultModel,
                                   systemText: String = ChatGPTAPI.Constants.defaultSystemText,
@@ -212,7 +212,7 @@ public class ChatGPTAPI: @unchecked Sendable {
             return nil
         }
     }
-
+    
     public func sendMessage(text: String,
                             model: String = ChatGPTAPI.Constants.defaultModel,
                             systemText: String = ChatGPTAPI.Constants.defaultSystemText,
@@ -243,7 +243,7 @@ public class ChatGPTAPI: @unchecked Sendable {
             throw error
         }
     }
-    #endif
+#endif
     
     public func deleteHistoryList() {
         self.historyList.removeAll()

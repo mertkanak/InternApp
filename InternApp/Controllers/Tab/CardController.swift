@@ -66,7 +66,7 @@ class CardController: UIViewController {
     
     var currentIndex = 0
     // MARK: - Lifecycle
-   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
