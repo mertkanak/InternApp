@@ -10,11 +10,6 @@ import SwiftUI
 
 class HomeController: UIViewController {
     // MARK: - TODO
-    /**
-     Workbooka çevir
-     cardtan gelen kelimeleri cell içinde anlamlarıyla birlikte göster
-     workbook kelimelerini gptye yolla text versin
-     */
     
     // MARK: - UI Components
     let hostingController = UIHostingController(rootView: HomeView())
@@ -57,9 +52,6 @@ class HomeController: UIViewController {
             hostingController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
     }
-    
-    
-    
     
     // MARK: - Selectors
     
